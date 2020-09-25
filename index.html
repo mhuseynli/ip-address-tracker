@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"
+      integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A=="
+      crossorigin=""
+    />
+    <link rel="stylesheet" href="./css/style.css" />
+    <script
+      src="https://kit.fontawesome.com/e8166ef8f0.js"
+      crossorigin="anonymous"
+    ></script>
+    <title>IP Address Tracker</title>
+  </head>
+  <body>
+    <div class="header">
+      <div class="title">IP Address Tracker</div>
+      <div class="search-box">
+        <input
+          id="search"
+          placeholder="Search for any IP address"
+          type="text"
+        />
+        <button id="fetch_btn">
+          <img src="./images/icon-arrow.svg" alt="arrow" />
+        </button>
+      </div>
+    </div>
+    <div class="info">
+      <div class="info-box">
+        <div class="info-item">
+          <span>IP ADDRESS</span>
+          <h2 id="ip-address"><i class="fas fa-spinner fa-pulse"></i></h2>
+        </div>
+        <div class="separate"></div>
+        <div class="info-item">
+          <span>LOCATION</span>
+          <h2 id="location"><i class="fas fa-spinner fa-pulse"></i></h2>
+        </div>
+        <div class="separate"></div>
+        <div class="info-item">
+          <span>TIMEZONE</span>
+          <h2 id="timezone"><i class="fas fa-spinner fa-pulse"></i></h2>
+        </div>
+        <div class="separate"></div>
+        <div class="info-item">
+          <span>ISP</span>
+          <h2 id="isp"><i class="fas fa-spinner fa-pulse"></i></h2>
+        </div>
+      </div>
+    </div>
+    <div id="map-container">
+      <i class="fas fa-spinner fa-pulse"></i>
+    </div>
+
+    <script
+      src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"
+      integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA=="
+      crossorigin=""
+    ></script>
+    <script src="./js/main.js"></script>
+  </body>
+</html>
